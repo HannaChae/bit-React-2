@@ -7,9 +7,21 @@ import './App.css';
 /* import SignInSide from './sym/pages/SignInSide' */
 /* import Pricing from './uss/pages/Pricing' */
 /* import SiginUp from './uss/pages/StdnJoin' */
-import { Main } from './tst/pages'
+/* import { Main } from './tst/pages' */
+import { Airport } from './air/pages/index'
+import { createStore, applyMiddleware  } from 'redux';
+import { airportReducer } from './air/pages/Airport'
+import { combineReducers } from "redux"
+import thunk from 'redux-thunk';
+import {Provider} from'react-redux'
+const rootReducer = combineReducers({
+  airportReducer
+})
+
 export default function App() {
   return (
-    <Main/>
+    <Provider store={createStore(rootReducer, applyMiddleware(thunk))}>
+    <Airport/>
+    </Provider>
   )
 }
