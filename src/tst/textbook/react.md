@@ -171,3 +171,9 @@ p.313
 npm i -D throttle-debounce
 npm i -D react-redux redux
 p.319
+p.295
+리덕스는 플럭스(흐름)
+p.296
+플럭스는 내장된 스트림 자바는 스트림화시키는건데
+내부의 흐름구조를 만듦
+p.297
